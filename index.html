@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot - AI-Powered Workflow Acceleration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">FlowPilot</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-secondary">Sign In</button>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">✨</span>
+                    <span>AI-Powered Development</span>
+                </div>
+                <h1 class="hero-title">
+                    Turn Ideas Into<br>
+                    <span class="gradient-text">Working Software</span><br>
+                    In Minutes
+                </h1>
+                <p class="hero-description">
+                    FlowPilot is an AI-powered workflow acceleration system that helps developers 
+                    build features faster with intelligent code generation, automated testing, 
+                    and comprehensive documentation.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">
+                        <span>Start Building</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large">
+                        <span class="btn-icon">▶</span>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">95%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3-5x</div>
+                        <div class="stat-label">Faster Development</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">80%+</div>
+                        <div class="stat-label">Test Coverage</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">FlowPilot Terminal</div>
+                    </div>
+                    <div class="window-content">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">flowpilot run "Add user authentication with JWT"</span>
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">📋</span> Analyzing task...
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">✓</span> Task type: feature
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">✓</span> Complexity: moderate
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">📊</span> Execution Plan: 10 steps
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">🔄</span> Executing...
+                        </div>
+                        <div class="terminal-line output success">
+                            <span class="icon">✅</span> Task completed successfully!
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">📝</span> 11 files modified, 487 lines added
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="icon">🧪</span> 12 tests generated
+                        </div>
+                        <div class="terminal-cursor">_</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-description">
+                    Everything you need to accelerate your development workflow
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Natural Language Understanding</h3>
+                    <p class="feature-description">
+                        Describe what you want in plain English. FlowPilot understands your intent 
+                        and creates a detailed execution plan.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Smart Task Decomposition</h3>
+                    <p class="feature-description">
+                        Complex tasks are broken down into clear, executable steps with 
+                        dependencies and risk assessment.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">Intelligent Code Generation</h3>
+                    <p class="feature-description">
+                        Context-aware code generation that respects your project's patterns, 
+                        conventions, and best practices.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧪</div>
+                    <h3 class="feature-title">Automatic Test Generation</h3>
+                    <p class="feature-description">
+                        Comprehensive test suites with unit tests, integration tests, and 
+                        edge case coverage.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">Clear Explanations</h3>
+                    <p class="feature-description">
+                        Every change is documented with clear reasoning. Learn while you build 
+                        with beginner and expert modes.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">PR Automation</h3>
+                    <p class="feature-description">
+                        Automatic generation of commit messages, PR descriptions, and 
+                        change summaries.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">
+                    From idea to production-ready code in 6 simple steps
+                </p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Describe Your Task</h3>
+                        <p class="step-description">
+                            Use natural language to describe what you want to build. 
+                            FlowPilot understands features, bug fixes, and refactoring tasks.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Repository Analysis</h3>
+                        <p class="step-description">
+                            FlowPilot analyzes your codebase to understand structure, patterns, 
+                            dependencies, and conventions.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Execution Plan</h3>
+                        <p class="step-description">
+                            Review a detailed plan with ordered steps, affected files, 
+                            and risk assessment before any changes are made.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Code Transformation</h3>
+                        <p class="step-description">
+                            Safe, intelligent code modifications across multiple files 
+                            with proper error handling and validation.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Test Generation</h3>
+                        <p class="step-description">
+                            Comprehensive test suites are automatically generated with 
+                            unit tests, integration tests, and edge cases.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3 class="step-title">PR Ready</h3>
+                        <p class="step-description">
+                            Get commit messages, PR descriptions, and documentation 
+                            ready for review and deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="section-description">
+                    Real example: Adding JWT authentication to a FastAPI application
+                </p>
+            </div>
+            <div class="demo-content">
+                <div class="demo-tabs">
+                    <button class="tab-btn active" data-tab="input">Input</button>
+                    <button class="tab-btn" data-tab="plan">Execution Plan</button>
+                    <button class="tab-btn" data-tab="code">Generated Code</button>
+                    <button class="tab-btn" data-tab="tests">Tests</button>
+                    <button class="tab-btn" data-tab="pr">PR Output</button>
+                </div>
+                <div class="demo-panels">
+                    <div class="demo-panel active" id="input-panel">
+                        <div class="code-block">
+                            <pre><code>$ flowpilot run "Add user authentication with JWT tokens"
+
+📋 Analyzing task...
+✓ Task type: feature
+✓ Priority: high
+✓ Complexity: moderate
+✓ Estimated duration: ~15 minutes
+
+🔍 Repository Analysis:
+  • Language: Python
+  • Framework: FastAPI
+  • Current endpoints: 4
+  • Test framework: None detected
+
+📊 Generating execution plan...</code></pre>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="plan-panel">
+                        <div class="code-block">
+                            <pre><code>Execution Plan (10 steps):
+
+1. Add JWT dependencies to requirements.txt
+   • python-jose[cryptography]
+   • passlib[bcrypt]
+   • python-multipart
+
+2. Create authentication models
+   • backend/auth/models.py
+   • backend/auth/schemas.py
+
+3. Implement JWT token utilities
+   • backend/auth/jwt_handler.py
+
+4. Implement password hashing
+   • backend/auth/password.py
+
+5. Create user database (in-memory demo)
+   • backend/auth/database.py
+
+6. Create authentication endpoints
+   • POST /auth/register
+   • POST /auth/login
+   • GET /auth/me
+
+7. Integrate into main application
+   • Update backend/main.py
+
+8. Protect payment endpoint
+   • Require authentication
+
+9. Add configuration
+   • backend/config.py
+
+10. Generate comprehensive tests
+    • tests/test_auth.py
+
+⚠️  Risks:
+  • Medium: Breaking changes to existing endpoints
+    → Mitigation: Only protect payment endpoint
+
+Proceed with execution? [Y/n]</code></pre>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="code-panel">
+                        <div class="code-block">
+                            <pre><code># backend/auth/jwt_handler.py
+from datetime import datetime, timedelta
+from jose import JWTError, jwt
+from fastapi import Depends, HTTPException
+
+def create_access_token(data: dict) -> str:
+    """Create a JWT access token"""
+    to_encode = data.copy()
+    expire = datetime.utcnow() + timedelta(minutes=30)
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm="HS256")
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    """Get current authenticated user"""
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
+        username = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+        return get_user(username)
+    except JWTError:
+        raise credentials_exception
+
+# backend/auth/routes.py
+@auth_router.post("/register", response_model=User)
+async def register(user_data: UserCreate):
+    """Register a new user"""
+    if user_exists(user_data.username):
+        raise HTTPException(400, "Username already registered")
+    
+    hashed_password = hash_password(user_data.password)
+    user = create_user(UserInDB(
+        username=user_data.username,
+        email=user_data.email,
+        hashed_password=hashed_password
+    ))
+    return User(**user.dict())</code></pre>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="tests-panel">
+                        <div class="code-block">
+                            <pre><code># tests/test_auth.py
+def test_user_registration():
+    """Test successful user registration"""
+    response = client.post("/auth/register", json={
+        "username": "testuser",
+        "email": "test@example.com",
+        "password": "testpassword123"
+    })
+    assert response.status_code == 201
+    assert response.json()["username"] == "testuser"
+    assert "password" not in response.json()
+
+def test_user_login():
+    """Test successful user login"""
+    # Register user
+    client.post("/auth/register", json={
+        "username": "testuser",
+        "email": "test@example.com",
+        "password": "testpassword123"
+    })
+    
+    # Login
+    response = client.post("/auth/login", data={
+        "username": "testuser",
+        "password": "testpassword123"
+    })
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+
+def test_protected_endpoint():
+    """Test accessing protected endpoint"""
+    # Without token
+    response = client.post("/process-payment", json={...})
+    assert response.status_code == 401
+    
+    # With valid token
+    token = login_and_get_token()
+    response = client.post(
+        "/process-payment",
+        json={...},
+        headers={"Authorization": f"Bearer {token}"}
+    )
+    assert response.status_code == 200</code></pre>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="pr-panel">
+                        <div class="code-block">
+                            <pre><code>✅ Task Completed Successfully
+
+📝 Summary:
+  • 11 files modified/created
+  • 487 lines added
+  • 12 tests generated
+  • All tests passing
+
+📊 Changes:
+  Files Modified: 2
+    • requirements.txt
+    • backend/main.py
+  
+  Files Created: 9
+    • backend/config.py
+    • backend/auth/__init__.py
+    • backend/auth/models.py
+    • backend/auth/schemas.py
+    • backend/auth/jwt_handler.py
+    • backend/auth/password.py
+    • backend/auth/database.py
+    • backend/auth/routes.py
+    • tests/test_auth.py
+
+🔐 Security Enhancements:
+  ✓ Passwords hashed with bcrypt
+  ✓ JWT tokens with expiration
+  ✓ Protected payment endpoint
+  ✓ Environment-based secrets
+
+📋 PR Title:
+feat: Add JWT-based user authentication
+
+📄 PR Description:
+Implements JWT-based authentication system with:
+- User registration and login endpoints
+- Secure password hashing
+- Token-based authentication
+- Protected payment endpoint
+- Comprehensive test suite (12 tests)
+
+⚠️  Breaking Changes:
+The /process-payment endpoint now requires authentication.
+
+🔗 Next Steps:
+  1. Review changes: git diff
+  2. Run tests: pytest
+  3. Set SECRET_KEY environment variable
+  4. Create PR: gh pr create</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="integrations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Seamless Integrations</h2>
+                <p class="section-description">
+                    Works with your favorite tools and platforms
+                </p>
+            </div>
+            <div class="integrations-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">💻</div>
+                    <h3>VS Code</h3>
+                    <p>Native extension with command palette and side panel</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>Automated issue-to-PR workflows and code review</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">🔄</div>
+                    <h3>CI/CD</h3>
+                    <p>Jenkins, GitLab CI, CircleCI integration</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">💬</div>
+                    <h3>Slack</h3>
+                    <p>Execute tasks from Slack with slash commands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">
+                    Choose the plan that fits your needs
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 10 tasks per month</li>
+                        <li>✓ Basic features</li>
+                        <li>✓ Community support</li>
+                        <li>✓ Public repositories</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-block">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited tasks</li>
+                        <li>✓ All features</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Private repositories</li>
+                        <li>✓ Team collaboration</li>
+                        <li>✓ Advanced analytics</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block">Start Free Trial</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ Self-hosted option</li>
+                        <li>✓ SSO integration</li>
+                        <li>✓ Custom models</li>
+                        <li>✓ Dedicated support</li>
+                        <li>✓ SLA guarantee</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-block">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Accelerate Your Workflow?</h2>
+                <p class="cta-description">
+                    Join thousands of developers building faster with FlowPilot
+                </p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large">
+                        <span>Start Building Now</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-secondary btn-large">
+                        <span>View Documentation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">FlowPilot</span>
+                    </div>
+                    <p class="footer-description">
+                        AI-powered workflow acceleration for developers
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FlowPilot. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
