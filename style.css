@@ -54,6 +54,27 @@
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-2xl: 1.5rem;
+
+    /* Navbar */
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg-scrolled: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] {
+    --primary: #818cf8;
+    --primary-dark: #6366f1;
+    --primary-light: #a5b4fc;
+    --secondary: #1e293b;
+    --secondary-light: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --border: #334155;
+    --nav-bg: rgba(15, 23, 42, 0.8);
+    --nav-bg-scrolled: rgba(15, 23, 42, 0.95);
 }
 
 body {
@@ -78,11 +99,17 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     padding: var(--spacing-sm) 0;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    background: var(--nav-bg-scrolled);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-content {
@@ -123,7 +150,25 @@ body {
 
 .nav-actions {
     display: flex;
+    align-items: center;
     gap: var(--spacing-sm);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    color: var(--text-primary);
+}
+.theme-toggle:hover {
+    background-color: var(--bg-tertiary);
 }
 
 /* Buttons */
@@ -769,8 +814,27 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
+    .nav-content {
+        flex-wrap: wrap;
+    }
+    .nav-links, .nav-actions {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--bg-primary);
+        padding: var(--spacing-md) 0;
+        margin-top: var(--spacing-sm);
+    }
+    .nav-links.mobile-active, .nav-actions.mobile-active {
+        display: flex;
+    }
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
     }
     
     .hero {

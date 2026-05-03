@@ -38,13 +38,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.8)';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
     });
+    
+    // Dark mode toggle
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const setTheme = (isDark) => {
+        if (isDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            if (themeToggle) themeToggle.textContent = '☀️';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            if (themeToggle) themeToggle.textContent = '🌙';
+        }
+    };
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark.matches)) {
+        setTheme(true);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.hasAttribute('data-theme');
+            setTheme(!isDark);
+            localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+        });
+    }
     
     // Animate elements on scroll
     const observerOptions = {
@@ -71,16 +96,45 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Terminal typing animation
     const terminalLines = document.querySelectorAll('.terminal-line');
-    let delay = 0;
+    terminalLines.forEach(line => line.style.opacity = '0');
     
-    terminalLines.forEach((line, index) => {
-        line.style.opacity = '0';
-        setTimeout(() => {
-            line.style.transition = 'opacity 0.3s ease';
-            line.style.opacity = '1';
-        }, delay);
-        delay += 300;
-    });
+    const typeCommand = (element, text, callback) => {
+        element.style.opacity = '1';
+        element.textContent = '';
+        let i = 0;
+        const interval = setInterval(() => {
+            element.textContent += text.charAt(i);
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+                setTimeout(callback, 500);
+            }
+        }, 50); // Typing speed
+    };
+
+    if (terminalLines.length > 0) {
+        const commandLine = terminalLines[0];
+        const commandText = commandLine.querySelector('.command');
+        if (commandText) {
+            const fullText = commandText.textContent;
+            commandLine.style.opacity = '1';
+            commandText.textContent = '';
+            
+            // Wait 1s before starting to type
+            setTimeout(() => {
+                typeCommand(commandText, fullText, () => {
+                    let delay = 300;
+                    for (let j = 1; j < terminalLines.length; j++) {
+                        setTimeout(() => {
+                            terminalLines[j].style.transition = 'opacity 0.3s ease';
+                            terminalLines[j].style.opacity = '1';
+                        }, delay);
+                        delay += 300;
+                    }
+                });
+            }, 1000);
+        }
+    }
     
     // Stats counter animation
     const animateCounter = (element, target, duration = 2000) => {
@@ -204,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
         block.innerHTML = html;
     });
     
-    // Mobile menu toggle (if needed)
+    // Mobile menu toggle
     const createMobileMenu = () => {
         if (window.innerWidth <= 768) {
             const navLinks = document.querySelector('.nav-links');
@@ -214,27 +268,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const menuBtn = document.createElement('button');
                 menuBtn.className = 'mobile-menu-btn';
                 menuBtn.innerHTML = '☰';
-                menuBtn.style.cssText = `
-                    display: block;
-                    background: none;
-                    border: none;
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    color: var(--text-primary);
-                `;
+                menuBtn.setAttribute('aria-label', 'Toggle menu');
                 
                 document.querySelector('.nav-content').appendChild(menuBtn);
                 
                 menuBtn.addEventListener('click', () => {
-                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '100%';
-                    navLinks.style.left = '0';
-                    navLinks.style.right = '0';
-                    navLinks.style.background = 'white';
-                    navLinks.style.padding = '1rem';
-                    navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                    navLinks.classList.toggle('mobile-active');
+                    if (navActions) navActions.classList.toggle('mobile-active');
                 });
             }
         }
