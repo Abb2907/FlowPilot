@@ -315,10 +315,6 @@ FlowPilot takes security seriously:
 - **Audit Logging**: All actions are logged for compliance
 - **Secret Detection**: Prevents accidental secret exposure
 
-## 🤝 Contributing
-
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ### Development Setup
 
 ```bash
@@ -382,21 +378,10 @@ Performance on common tasks:
 - 📋 Advanced security
 - 📋 Custom models
 
-See [FUTURE_IMPROVEMENTS.md](FUTURE_IMPROVEMENTS.md) for detailed roadmap.
-
 ## 📄 License
 
 FlowPilot is released under the MIT License. See [LICENSE](LICENSE) for details.
 
-## 🙏 Acknowledgments
-
-FlowPilot builds upon the work of many open-source projects:
-
-- [OpenAI](https://openai.com/) for GPT models
-- [FastAPI](https://fastapi.tiangolo.com/) for API framework
-- [Pydantic](https://pydantic-docs.helpmanual.io/) for data validation
-- [tree-sitter](https://tree-sitter.github.io/) for code parsing
-- [pytest](https://pytest.org/) for testing framework
 
 ## 📞 Support
 
